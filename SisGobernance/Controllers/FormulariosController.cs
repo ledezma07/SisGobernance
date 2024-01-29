@@ -59,13 +59,17 @@ namespace SisGobernance.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NombreProducto,Marca,Modelo,Pais,Cantidad,Observaciones,FechaRegistro,FechaModificacion,Rol,ElimLog,UsuarioId,EmpresaId")] Formulario formulario)
+        public async Task<IActionResult> Create(Formulario formulario)
         {
             if (ModelState.IsValid)
             {
+                formulario.FechaRegistro = DateTime.Now;
+                formulario.UsuarioId = 1;
                 _context.Add(formulario);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction(nameof(Index));
+                TempData["FormularioRegistrado"] = "Formulario Registrado";
+                return RedirectToAction("Details", "Formularios", new {id = formulario.EmpresaId} );
             }
             ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Email", formulario.EmpresaId);
             ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Email", formulario.UsuarioId);
