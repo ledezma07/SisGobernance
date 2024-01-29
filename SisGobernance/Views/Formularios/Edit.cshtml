@@ -1,10 +1,11 @@
-﻿@model SisGobernance.Models.Formulario
+﻿@using SisGobernance.Dtos
+@model SisGobernance.Models.Formulario
 
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Realizar Acciones de Modificacion</h1>
 
 <h4>Formulario</h4>
 <hr />
@@ -55,12 +56,17 @@
             </div>
             <div class="form-group">
                 <label asp-for="Rol" class="control-label"></label>
-                <select asp-for="Rol" class="form-control"></select>
+                <select asp-for="Rol" class="form-control" asp-items="Html.GetEnumSelectList<EstadoEmun>()" required>
+
+                </select>
                 <span asp-validation-for="Rol" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ElimLog" class="control-label"></label>
-                <select asp-for="ElimLog" class="form-control"></select>
+                <label asp-for="ElimLog" class="control-label">Dar de Alta o Baja</label>
+                <select asp-for="ElimLog" class="form-control" asp-items="Html.GetEnumSelectList<ElimEmun>()" required>
+
+
+                </select>
                 <span asp-validation-for="ElimLog" class="text-danger"></span>
             </div>
             <div class="form-group">

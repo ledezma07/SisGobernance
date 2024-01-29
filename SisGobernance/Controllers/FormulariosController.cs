@@ -69,7 +69,7 @@ namespace SisGobernance.Controllers
                 await _context.SaveChangesAsync();
                 //return RedirectToAction(nameof(Index));
                 TempData["FormularioRegistrado"] = "Formulario Registrado";
-                return RedirectToAction("Details", "Formularios", new {id = formulario.EmpresaId} );
+                return RedirectToAction("Details", "Formularios", new {id = formulario.EmpresaId});
             }
             ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Email", formulario.EmpresaId);
             ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Email", formulario.UsuarioId);
@@ -92,6 +92,7 @@ namespace SisGobernance.Controllers
             ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Email", formulario.EmpresaId);
             ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Email", formulario.UsuarioId);
             return View(formulario);
+            //return RedirectToAction("Details","Empresas",new {id = formulario.EmpresaId});
         }
 
         // POST: Formularios/Edit/5
@@ -99,7 +100,8 @@ namespace SisGobernance.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NombreProducto,Marca,Modelo,Pais,Cantidad,Observaciones,FechaRegistro,FechaModificacion,Rol,ElimLog,UsuarioId,EmpresaId")] Formulario formulario)
+        //public async Task<IActionResult> Edit(int id, [Bind("Id,NombreProducto,Marca,Modelo,Pais,Cantidad,Observaciones,FechaRegistro,FechaModificacion,Rol,ElimLog,UsuarioId,EmpresaId")] Formulario formulario)
+        public async Task<IActionResult> Edit(int id,  Formulario formulario)
         {
             if (id != formulario.Id)
             {
@@ -110,6 +112,7 @@ namespace SisGobernance.Controllers
             {
                 try
                 {
+                    formulario.FechaModificacion = DateTime.Now;
                     _context.Update(formulario);
                     await _context.SaveChangesAsync();
                 }

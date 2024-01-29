@@ -34,6 +34,7 @@ namespace SisGobernance.Controllers
             }
 
             var empresa = await _context.Empresas
+                .Include(x=>x.Formularios!.OrderByDescending(x => x.Id))
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (empresa == null)
             {
