@@ -33,13 +33,15 @@ namespace SisGobernance.Models
         [Required]
         public ElimEmun ElimLog { get; set;}
 
+        public virtual List<Pago>? Pagos { get; set; }
+
         //Relacion Foranea
         public int UsuarioId { get; set; }
         public virtual Usuario? Usuario { get; set; }
         public int EmpresaId { get; set; }
         public virtual Empresa? Empresa { get; set; }
 
-        public virtual List<Pago>? Pagos { get; set; }
+       
 
 
 
