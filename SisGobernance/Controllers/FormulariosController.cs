@@ -69,7 +69,7 @@ namespace SisGobernance.Controllers
                 await _context.SaveChangesAsync();
                 //return RedirectToAction(nameof(Index));
                 TempData["FormularioRegistrado"] = "Formulario Registrado";
-                return RedirectToAction("Details", "Formularios", new {id = formulario.EmpresaId});
+                return RedirectToAction("Details", "Empresas", new {id = formulario.EmpresaId});
             }
             ViewData["EmpresaId"] = new SelectList(_context.Empresas, "Id", "Email", formulario.EmpresaId);
             ViewData["UsuarioId"] = new SelectList(_context.Usuarios, "Id", "Email", formulario.UsuarioId);

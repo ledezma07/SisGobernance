@@ -88,3 +88,18 @@
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+<h3>Realizaer Pago y Subir Comprobante</h3>
+
+@{
+    ViewData["FormularioId"] = Model.Id;
+}
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <partial name="~/Views/Pagoes/Create.cshtml" model="new Pago()" view-data="ViewData"></partial>
+    </div>
+    <div class="col-sm-8">
+       
+    </div>
+</div>
