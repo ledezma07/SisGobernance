@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SisGobernance")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a50c73e2518129dfc04268e911b83ac1c2416856")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e426f6da3cda3ef85e0d3d578ea042f25ddb242")]
 [assembly: System.Reflection.AssemblyProductAttribute("SisGobernance")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SisGobernance")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
