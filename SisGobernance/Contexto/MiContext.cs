@@ -6,7 +6,6 @@ namespace SisGobernance.Contexto
     {
         public MiContext(DbContextOptions options) : base(options)
         {
-
         }
 
         public DbSet<Usuario> Usuarios { get; set; }

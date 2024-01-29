@@ -1,10 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using SisGobernance.Contexto;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-var app = builder.Build();
+//Aqui la sub cadena parala conexion
+builder.Services.AddDbContext<MiContext>(options => {
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CadenaConexion"));
+});
 
+//Fin dela cadena
+var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {

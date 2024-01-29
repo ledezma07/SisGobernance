@@ -19,7 +19,7 @@ namespace SisGobernance.Models
         [Display(Name = "Cargar Comprobante")]
         public IFormFile? FotoFile { get; set; }
 
-        public int EFormularioId { get; set; }
+        public int FormularioId { get; set; }
         public virtual Formulario? Formulario { get; set; }
 
 
