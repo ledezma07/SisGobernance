@@ -52,3 +52,18 @@
     <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+
+@{
+    ViewData["EmpresaId"] = Model.Id;
+}
+
+
+
+<div class="row">
+    <div class="col-sm-4">
+        <partial name="~/Views/Formularios/Create.cshtml" model="new Formulario()" view-data="ViewData" view-data="ViewData"></partial>
+    </div>
+    <div class="col-sm-8">
+        
+    </div>
+</div>
