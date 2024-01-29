@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SisGobernance", "SisGobernance\SisGobernance.csproj", "{01AE35B0-6DE9-4A9B-95EE-929CD2653DAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01AE35B0-6DE9-4A9B-95EE-929CD2653DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AE35B0-6DE9-4A9B-95EE-929CD2653DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AE35B0-6DE9-4A9B-95EE-929CD2653DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AE35B0-6DE9-4A9B-95EE-929CD2653DAF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EFE91F9-140B-459C-ABFC-192C89FE0A78}
+	EndGlobalSection
+EndGlobal
